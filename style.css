@@ -14,7 +14,7 @@ body {
 
 section {
     width: 50%;
-    min-width: 500px;
+    min-width: 400px;
     padding: 0 1.5em;
     margin: auto;
     display: flex;
