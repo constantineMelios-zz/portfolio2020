@@ -1,41 +1,57 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     width: 100vw;
     height: 100vh;
-    background: url(./img/under.jpg);
-    background-size: cover;
     font-family: 'Anton', sans-serif;
-    position: relative;
     box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section {
+    width: 50%;
+    min-width: 500px;
+    padding: 0 1.5em;
+    margin: auto;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
 }
 
 h1 {
-    font-size: 4.5rem;
+    font-size: 3rem;
     margin: 0;
-    padding: 50px 0 0 25px;
 }
 
-p{
+p {
     margin: 0;
-    padding-left: 25px;
-    font-size: 2.45rem;
-    line-height: 0.9em;
+    font-size: 1.8rem;
+    margin-bottom: 5em;
+    font-family: 'Roboto', sans-serif;
 }
 
 a {
-    display: flex;
-    align-items: center;
-    transform: rotate(-33deg) translateX(-100px) translateY(160px);
-    font-family: 'Roboto', sans-serif;
-    border-bottom: 1px gray solid;
-    width: max-content;
     text-decoration: none;
-    padding: 0.5em;
+    background: black;
+    color: white;
     font-size: 1.5rem;
-    color: inherit;
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+    transition: background 0.2s ease-in-out, color 0.3s ease-in-out;
+    border: 2px solid black;
 }
 
 a:hover {
-    background: black;
-    color: white;
+    background: white;
+    color: black;
+}
+
+img {
+    width: 100%;
+    border-radius: 0.3em;
 }
