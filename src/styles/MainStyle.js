@@ -6,8 +6,9 @@ const MainStyle = styled.main`
   min-height: 100vh;
   justify-content: center;
   align-items: center;
+  padding: 1em;
   .main-side {
-    flex: 0 1 50%;
+    flex: 1 1 max-content;
     margin: auto;
   }
   .main-title {
@@ -21,12 +22,25 @@ const MainStyle = styled.main`
   }
   .main-content {
     width: max-content;
-    padding: 0.25em 0;
-    font-size: 1.1rem;
+    padding: 0.50em 0;
+    font-size: 1rem;
     font-weight: var(--light);
+    @media(min-width: 1100px) {
+      font-size: 1.25rem;
+    }
   }
   .image-container {
     position: relative;
+    min-width: 500px;
+    min-height: 100vh;
+    .javascript {
+      position: absolute;
+      top: 0;
+      left: 1em;
+      :hover {
+        border: 1px solid red;
+      }
+    }
   }
 `
 

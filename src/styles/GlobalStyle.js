@@ -24,6 +24,7 @@ const GlobalStyle = createGlobalStyle`
     background: var(--light);
     color: var(--dark);
     font-family: 'Rubik', sans-serif;
+    overflow-x: hidden;
   }
 `
 

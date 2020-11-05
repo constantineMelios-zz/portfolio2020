@@ -29,7 +29,7 @@ export default function Home() {
           <p className="main-content">Front-End Developer | Digital Marketer</p>
         </div>
         <div className="main-side image-container">
-          <JavaScript />
+          <JavaScript className="javascript"/>
         </div>
       </MainStyle>
     </>
