@@ -31,12 +31,8 @@ const MainStyle = styled.main`
   }
   .image-container {
     position: relative;
-    min-width: 500px;
-    min-height: 100vh;
     .javascript {
-      position: absolute;
-      top: 0;
-      left: 1em;
+      width: 250px;
       :hover {
         border: 1px solid red;
       }
