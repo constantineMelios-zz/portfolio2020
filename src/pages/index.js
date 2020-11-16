@@ -12,18 +12,16 @@ import
     StyledComponents, 
     Tailwind 
   } from "../assets"
+import { Layout } from "../components"
 import GlobalStyle from '../styles/GlobalStyle'
-import MainStyle from "../styles/MainStyle"
+// import MainStyle from "../styles/MainStyle"
 
 
 export default function Home() {
   return (
     <>
-      <Helmet>
-        <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,600;0,900;1,300;1,400;1,600;1,900&display=swap" rel="stylesheet" />
-      </Helmet>
-      <GlobalStyle />
-      <MainStyle>
+     Home Page
+      {/* <MainStyle>
         <div className="main-side">
           <h1 className="main-title">Hello, I am <br/> Constantine Melios,<br/> web developer.</h1>
           <p className="main-content">Front-End Developer | Digital Marketer</p>
@@ -31,7 +29,7 @@ export default function Home() {
         <div className="main-side image-container">
           <JavaScript className="javascript"/>
         </div>
-      </MainStyle>
+      </MainStyle> */}
     </>
   )
 }

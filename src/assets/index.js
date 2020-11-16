@@ -1,4 +1,5 @@
-export {default as Techs} from './techs.svg'
+export {default as Logo} from './logo-light.svg'
+export {default as LogoDark} from './logo-dark.svg'
 export {default as Bootstrap} from './bootstrap.svg'
 export {default as CSS} from './css.svg'
 export {default as Gatsby} from './gatsby.svg'
