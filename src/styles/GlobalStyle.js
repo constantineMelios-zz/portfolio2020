@@ -10,7 +10,7 @@ const GlobalStyle = createGlobalStyle`
     --blue: #3E78B2;
     --red: #F41101;
     --highlight: #D7CF07;
-    --light: 300;
+    --lighter: 300;
     --regular: 400;
     --bold: 600;
     --black: 900;

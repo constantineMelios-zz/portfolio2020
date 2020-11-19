@@ -8,8 +8,7 @@ import
     JavaScript, 
     ReactJS, 
     Sass, 
-    StyledComponents, 
-    Tailwind ,
+    StyledComponents,
     ReduxJS
   } from "../assets"
 import { MainStyle } from "../styles"
@@ -35,7 +34,6 @@ export default function Home() {
         <StyledComponents className='styled-components'/>
         <CSS className='css' />
         <Sass className='sass'/>
-        <Tailwind className='tailwind'/>
       </div>
     </MainStyle>
   )

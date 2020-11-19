@@ -124,7 +124,7 @@ const MainStyle = styled.main`
     width: max-content;
     padding: 0.50em 0;
     font-size: 1rem;
-    font-weight: var(--light);
+    font-weight: var(--lighter);
     height: 50%;
     overflow: hidden;
     opacity: 0;
@@ -139,13 +139,13 @@ const MainStyle = styled.main`
     font-size: 1.25rem;
     text-decoration: none;
     padding: 0.5em 1em;
-    margin: 0.5em;
+    margin: 0.75em;
     margin-left: 0;
     display: inline-block;
     transition: color 0.5s ease, background 0.5s ease;
     animation: ${buttonAnimation} 2.5s backwards;
     &.main__primary-button {
-      color: #FFFCFF;
+      color: var(--light);
       border: 1px solid var(--blue);
       background: var(--blue);
       :hover,
@@ -161,7 +161,7 @@ const MainStyle = styled.main`
       :hover,
       :active {
         background: var(--red);
-        color: #FFFCFF;
+        color: var(--light);
         border: 1px solid var(--light);
       }
     }
