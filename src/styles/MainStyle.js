@@ -19,28 +19,35 @@ const contentAnimation = keyframes`
   100% { transform: translate3d(0, 0, 0); opacity: 1;}
 `
 
+const buttonAnimation = keyframes`
+  0% {opacity: 0;}
+  80% {opacity: 0;}
+  100% {opacity: 1;}
+`
+
+const hoverAnimation = keyframes`
+  10% {filter: drop-shadow(3px 0px 0px var(--red)) drop-shadow(-3px 0px 0px var(--blue));}
+  90% {filter: drop-shadow(3px 0px 0px var(--red)) drop-shadow(-3px 0px 0px var(--blue));}
+`
+
 const blueAnimation = keyframes`
-  0%   { left:0; top:0 } 
-  49%  { left:0; top:0 } 
-	51%  { left:-3px; top:-3px; }  
-  53%  { left:0; top:0 } 
-  55%  { left:-3px; top:-3px; } 
-  57%  { left:0; top:0 }
-  59%  { left:-3px; top:-3px; } 
-  61%  { left:0; top:0 }
-	100% { left:0; top:0 }
+  49%  { left:0;} 
+	52%  { left:-3px;}  
+  55%  { left:0;} 
+  58%  { left:-3px;} 
+  61%  { left:0;}
+  64%  { left:-3px;} 
+  67%  { left:0;}
 `
 
 const redAnimation = keyframes`
-  0%   { left:0; top:0 } 
-  49%  { left:0; top:0 } 
-	51%  { left:3px; top:3px; }  
-  53%  { left:0; top:0 } 
-  55%  { left:3px; top:3px; } 
-  57%  { left:0; top:0 }
-  59%  { left:3px; top:3px; }
-  61%  { left:0; top:0 }
-	100% { left:0; top:0 }
+  49%  { left:0;} 
+	52%  { left:3px;}  
+  55%  { left:0;} 
+  58%  { left:3px;} 
+  61%  { left:0;}
+  64%  { left:3px;} 
+  67%  { left:0;}
 `
 
 const MainStyle = styled.main`
@@ -49,13 +56,12 @@ const MainStyle = styled.main`
   min-height: 100vh;
   justify-content: center;
   align-items: center;
-  padding: 1em;
-  .main-side {
-    flex: 1 1 max-content;
-    margin: auto;
+  padding: 2em;
+  .main__side {
+    flex: 0 1 max-content;
   }
-  .main-title {
-    font-size: 2.25rem;
+  .main__title {
+    font-size: 2rem;
     line-height: 1.09em;
     font-weight: var(--bold);
     position: relative;
@@ -114,7 +120,7 @@ const MainStyle = styled.main`
       background: var(--dark);
     }
   }
-  .main-content {
+  .main__content {
     width: max-content;
     padding: 0.50em 0;
     font-size: 1rem;
@@ -129,13 +135,89 @@ const MainStyle = styled.main`
       font-size: 1.25rem;
     }
   }
-  .image-container {
-    position: relative;
-    .javascript {
-      width: 250px;
-      :hover {
-        border: 1px solid red;
+  a {
+    font-size: 1.25rem;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    margin: 0.5em;
+    margin-left: 0;
+    display: inline-block;
+    transition: color 0.5s ease, background 0.5s ease;
+    animation: ${buttonAnimation} 2.5s backwards;
+    &.main__primary-button {
+      color: #FFFCFF;
+      border: 1px solid var(--blue);
+      background: var(--blue);
+      :hover,
+      :active {
+        background: var(--light);
+        color: var(--blue);
       }
+    }
+    &.main__secondary-button {
+      color: var(--red);
+      background: none;
+      border: 1px solid var(--red);
+      :hover,
+      :active {
+        background: var(--red);
+        color: #FFFCFF;
+        border: 1px solid var(--light);
+      }
+    }
+  }
+
+  .image-container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    :hover {
+      svg {
+        animation: ${hoverAnimation} 0.25s 2;
+      }
+    }
+    svg {
+      z-index: 1;
+    }
+    .react {
+      width: 125px;
+      transform: translateX(70%) translateY(60%) rotate(-15deg);
+    }
+    .redux {
+      width: 75px;
+      transform: translateX(100%) translateY(60%) rotate(15deg);
+    }
+    .html {
+      width: 70px;
+      transform: translateX(-110%) translateY(115%) rotate(5deg);
+    }
+    .gatsby {
+      width: 90px;
+      transform: translateX(100%) translateY(80%) rotate(-8deg);
+    }
+    .javascript {
+      z-index: 0;
+      width: 250px;
+    }
+    .git {
+      width: 125px;
+      transform: translateX(-50%) translateY(15%) rotate(-8deg);
+    }
+    .styled-components {
+      width: 70px;
+      transform: translateX(125%) translateY(-120%) rotate(-8deg);
+    }
+    .css {
+      width: 125px;
+      transform: translateX(30%) translateY(-30%) rotate(8deg);
+    }
+    .sass {
+      width: 80px;
+      transform: translateX(-110%) translateY(-20%) rotate(-12deg);
+    }
+    .tailwind {
+      width: 40px;
+      transform: translateX(320%) translateY(-325%) rotate(-12deg);
     }
   }
 `

@@ -4,7 +4,7 @@ import { Header } from '.'
 
 export default function Layout({children}) {
   return <>
-  {/* <Header /> */}
+  <Header />
     {children}
   </>
 }

@@ -8,10 +8,9 @@ export default function Header() {
   const mode = useSelector((state) => state.mode)
 
   return <HeaderStyle>
-    {mode === 'light' ? 
+    {/* {mode === 'light' ? 
       <Logo alt= ''/> : 
       <LogoDark alt='' /> 
-    }
-    <Theme />
+    } */}
   </HeaderStyle>
 }
