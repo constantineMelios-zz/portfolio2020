@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import { Layout } from './src/components';
+import Layout from './src/layout/Layout';
 import { GlobalStyle } from './src/styles';
 
 export function wrapPageElement({ element, props }) {

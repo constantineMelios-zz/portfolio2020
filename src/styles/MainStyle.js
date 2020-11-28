@@ -26,8 +26,9 @@ const buttonAnimation = keyframes`
 `;
 
 const hoverAnimation = keyframes`
-  10% {filter: drop-shadow(3px 0px 0px var(--red)) drop-shadow(-3px 0px 0px var(--blue));}
-  90% {filter: drop-shadow(3px 0px 0px var(--red)) drop-shadow(-3px 0px 0px var(--blue));}
+  5% {transform: translateX(0) translateY(0) rotate(0)}
+  15% {transform: translateX(0) translateY(0) rotate(-15deg)}
+  25% {transform: translateX(0) translateY(0) rotate(15deg)}
 `;
 
 const blueAnimation = keyframes`
@@ -173,7 +174,7 @@ const MainStyle = styled.main`
     grid-template-rows: repeat(3, auto);
     :hover {
       svg {
-        animation: ${hoverAnimation} 0.25s 2;
+        animation: ${hoverAnimation} 1s 1;
       }
     }
     svg {
