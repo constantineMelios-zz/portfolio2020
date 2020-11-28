@@ -152,16 +152,19 @@ const MainStyle = styled.main`
       color: var(--light);
       border: 1px solid var(--blue);
       background: var(--blue);
+      transition: border 0.5s ease, color 0.5s ease, background 0.5s ease;
       :hover,
       :active {
-        background: var(--light);
+        border: 1px solid var(--highlight);
         color: var(--blue);
+        background: var(--highlight);
       }
     }
     &.main__secondary-button {
       color: var(--red);
       background: none;
       border: 1px solid var(--red);
+      transition: border 0.5s ease, color 0.5s ease, background 0.5s ease;
       :hover,
       :active {
         background: var(--red);

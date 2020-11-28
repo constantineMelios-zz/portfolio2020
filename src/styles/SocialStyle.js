@@ -14,10 +14,11 @@ const SocialStyle = styled.div`
   justify-content: center;
   margin: 1em auto;
   a {
-    color: var(--dark);
+    color: inherit;
     padding: 0 1em;
     svg {
-      width: 25px;
+      width: 20px;
+      height: 30px;
       margin: 0 auto;
       &:hover,
       &:active {
