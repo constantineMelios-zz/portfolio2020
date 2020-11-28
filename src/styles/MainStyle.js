@@ -58,6 +58,9 @@ const MainStyle = styled.main`
   justify-content: center;
   align-items: center;
   padding: 2em;
+  @media (min-width: 1250px) {
+    margin-left: 70px;
+  }
   .main__side {
     flex: 0 1 max-content;
   }
