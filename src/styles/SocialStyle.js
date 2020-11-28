@@ -12,10 +12,9 @@ const SocialStyle = styled.div`
   flex-flow: row wrap;
   align-items: center;
   justify-content: center;
-  margin: 1em auto;
   a {
     color: inherit;
-    padding: 0 1em;
+    margin: 0.5em;
     svg {
       width: 20px;
       height: 30px;
