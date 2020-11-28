@@ -3,6 +3,7 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { Logo, LogoDark } from '../assets';
 import { HeaderStyle } from '../styles';
+import Social from './Social';
 
 export default function Header() {
   const mode = useSelector((state) => state.mode);
@@ -24,6 +25,7 @@ export default function Header() {
           Contact
         </Link>
       </nav>
+      <Social />
     </HeaderStyle>
   );
 }

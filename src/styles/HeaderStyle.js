@@ -8,8 +8,6 @@ const HeaderStyle = styled.header`
   left: 0;
   display: flex;
   flex-flow: row wrap;
-  align-items: center;
-  justify-content: space-between;
   border-right: 1px solid var(--dark);
   svg {
     width: 50px;
@@ -18,10 +16,14 @@ const HeaderStyle = styled.header`
     align-self: flex-start;
   }
   nav {
+    flex: 1 1 80%;
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
+  }
+  div {
+    align-self: flex-end;
   }
 `;
 
