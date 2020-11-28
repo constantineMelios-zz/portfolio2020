@@ -1,3 +1,4 @@
+import { Link } from 'gatsby';
 import React from 'react';
 import {
   CSS,
@@ -11,6 +12,8 @@ import {
   ReduxJS,
 } from '../assets';
 import { MainStyle } from '../styles';
+import About from './About';
+import Contact from './Contact';
 
 export default function Home() {
   return (
@@ -25,12 +28,12 @@ export default function Home() {
         <h2 className="main__content">
           Front-End Developer | Digital Marketer
         </h2>
-        <a href="#" className="main__primary-button">
+        <Link to="/Contact" className="main__primary-button">
           Contact Me
-        </a>
-        <a href="#" className="main__secondary-button">
+        </Link>
+        <Link to="/About" className="main__secondary-button">
           Learn More
-        </a>
+        </Link>
       </div>
       <div className="main-side image-container">
         <ReactJS className="react" />
