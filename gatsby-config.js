@@ -8,15 +8,15 @@ module.exports = {
   plugins: [
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-transformer-sharp`, 
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
-      resolve: "gatsby-plugin-react-svg",
+      resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
-          include: /assets/ // See below to configure properly
-        }
-      }
+          include: /assets/, // See below to configure properly
+        },
+      },
     },
     {
       resolve: `gatsby-plugin-react-redux`,
@@ -35,6 +35,6 @@ module.exports = {
           ignoreFunction: true,
         },
       },
-    }
+    },
   ],
-}
+};

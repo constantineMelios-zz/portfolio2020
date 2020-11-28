@@ -1,9 +1,9 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const ThemeStyle = styled.div`
   position: absolute;
   right: 0;
   bottom: 60px;
   background: red;
-`
-export default ThemeStyle
+`;
+export default ThemeStyle;

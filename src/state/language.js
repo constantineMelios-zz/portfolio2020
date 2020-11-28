@@ -1,24 +1,24 @@
 export function greek() {
   return {
-    type: 'GREEK'
-  }
+    type: 'GREEK',
+  };
 }
 
 export function english() {
   return {
-    type: 'ENGLISH'
-  }
+    type: 'ENGLISH',
+  };
 }
 
 function languageReducer(language = 'en-US', action) {
   switch (action.type) {
     case 'GREEK':
-      return 'el-GR'
+      return 'el-GR';
     case 'ENGLISH':
-      return 'en-US'
+      return 'en-US';
     default:
-      return language
+      return language;
   }
 }
 
-export default languageReducer
+export default languageReducer;

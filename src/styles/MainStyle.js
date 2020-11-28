@@ -1,34 +1,34 @@
-import styled, { keyframes } from 'styled-components'
+import styled, { keyframes } from 'styled-components';
 
 const titleFirstAnimation = keyframes`
   0% { transform: translate3d(0, 200%, 0); opacity: 0;}
   40% { transform: translate3d(0, 100%, 0); opacity: 0;}
   60% { transform: translate3d(0, 100%, 0); opacity: 1;}
   100% { transform: translate3d(0, 0, 0); opacity: 1;}
-`
+`;
 
 const titleSecondAnimation = keyframes`
   0% { transform: translate3d(0, 100s%, 0); opacity: 0;}
   40% { transform: translate3d(0, 50%, 0); opacity: 0;}
   60% { transform: translate3d(0, 25%, 0); opacity: 1;}
   100% { transform: translate3d(0, 0, 0); opacity: 1;}
-`
+`;
 
 const contentAnimation = keyframes`
   0% { transform: translate3d(0, -50%, 0); opacity: 0;}
   100% { transform: translate3d(0, 0, 0); opacity: 1;}
-`
+`;
 
 const buttonAnimation = keyframes`
   0% {opacity: 0;}
   80% {opacity: 0;}
   100% {opacity: 1;}
-`
+`;
 
 const hoverAnimation = keyframes`
   10% {filter: drop-shadow(3px 0px 0px var(--red)) drop-shadow(-3px 0px 0px var(--blue));}
   90% {filter: drop-shadow(3px 0px 0px var(--red)) drop-shadow(-3px 0px 0px var(--blue));}
-`
+`;
 
 const blueAnimation = keyframes`
   49%  { left:0;} 
@@ -38,7 +38,7 @@ const blueAnimation = keyframes`
   61%  { left:0;}
   64%  { left:-3px;} 
   67%  { left:0;}
-`
+`;
 
 const redAnimation = keyframes`
   49%  { left:0;} 
@@ -48,7 +48,7 @@ const redAnimation = keyframes`
   61%  { left:0;}
   64%  { left:3px;} 
   67%  { left:0;}
-`
+`;
 
 const MainStyle = styled.main`
   display: flex;
@@ -79,35 +79,35 @@ const MainStyle = styled.main`
         transform: translate(0, 100%);
         animation: ${titleSecondAnimation} 0.5s forwards;
         animation-delay: 0.5s;
-        &:before{
-          content:attr(data-text);
-          display:block;
-          width:100%;
-          height:100%;
-          position:absolute;
-          left:0px;
-          top:0;
-          color:var(--blue);
-          z-index:-1;
+        &:before {
+          content: attr(data-text);
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left: 0px;
+          top: 0;
+          color: var(--blue);
+          z-index: -1;
           animation: ${blueAnimation} 4s infinite;
           animation-delay: 1.5s;
         }
-        &:after{
-          content:attr(data-text);
-          display:block;
-          width:100%;
-          height:100%;
-          position:absolute;
-          left:0;
-          top:0;
-          color:var(--red);
-          z-index:-1;
+        &:after {
+          content: attr(data-text);
+          display: block;
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          left: 0;
+          top: 0;
+          color: var(--red);
+          z-index: -1;
           animation: ${redAnimation} 4s infinite;
           animation-delay: 1.5s;
         }
       }
     }
-    @media(min-width: 1100px) {
+    @media (min-width: 1100px) {
       font-size: 3.5rem;
     }
     :after {
@@ -122,16 +122,16 @@ const MainStyle = styled.main`
   }
   .main__content {
     width: max-content;
-    padding: 0.50em 0;
+    padding: 0.5em 0;
     font-size: 1rem;
     font-weight: var(--lighter);
     height: 50%;
     overflow: hidden;
     opacity: 0;
     animation: ${contentAnimation} 0.5s forwards;
-    animation-delay: 1.50s;
+    animation-delay: 1.5s;
     transform: translate(0, -100%);
-    @media(min-width: 1100px) {
+    @media (min-width: 1100px) {
       font-size: 1.25rem;
     }
   }
@@ -220,6 +220,6 @@ const MainStyle = styled.main`
       transform: translateX(320%) translateY(-325%) rotate(-12deg);
     }
   }
-`
+`;
 
-export default MainStyle
+export default MainStyle;

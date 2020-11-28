@@ -1,10 +1,12 @@
-import React from 'react'
-import { Header } from '.'
+/* eslint-disable react/prop-types */
+import React from 'react';
+import { Header } from '.';
 
-
-export default function Layout({children}) {
-  return <>
-  <Header />
-    {children}
-  </>
+export default function Layout({ children }) {
+  return (
+    <>
+      <Header />
+      {children}
+    </>
+  );
 }

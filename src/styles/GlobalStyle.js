@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components'
-import reset from 'styled-reset'
+import { createGlobalStyle } from 'styled-components';
+import reset from 'styled-reset';
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
     --lighter: 300;
     --regular: 400;
     --bold: 600;
-    --black: 900;
+    --black: 900 ;
   }
   *,
   *::after,
@@ -26,6 +26,6 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Rubik', sans-serif;
     overflow-x: hidden;
   }
-`
+`;
 
-export default GlobalStyle
+export default GlobalStyle;
