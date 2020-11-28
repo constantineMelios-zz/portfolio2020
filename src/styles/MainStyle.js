@@ -28,7 +28,7 @@ const buttonAnimation = keyframes`
 const hoverAnimation = keyframes`
   5% {transform: translateX(0) translateY(0) rotate(0)}
   15% {transform: translateX(0) translateY(0) rotate(-15deg)}
-  25% {transform: translateX(0) translateY(0) rotate(15deg)}
+  30% {transform: translateX(0) translateY(0) rotate(15deg)}
 `;
 
 const blueAnimation = keyframes`
@@ -137,7 +137,7 @@ const MainStyle = styled.main`
     }
   }
   a {
-    font-size: 1.25rem;
+    font-size: 1rem;
     text-decoration: none;
     padding: 0.5em 1em;
     margin: 0.75em;
@@ -145,6 +145,9 @@ const MainStyle = styled.main`
     display: inline-block;
     transition: color 0.5s ease, background 0.5s ease;
     animation: ${buttonAnimation} 2.5s backwards;
+    @media (min-width: 1100px) {
+      font-size: 1.25rem;
+    }
     &.main__primary-button {
       color: var(--light);
       border: 1px solid var(--blue);
