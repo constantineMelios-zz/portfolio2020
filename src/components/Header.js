@@ -9,8 +9,9 @@ import { Social } from '.';
 
 export default function Header({ location }) {
   const mode = useSelector((state) => state.mode);
+
   return (
-    <HeaderStyle path={location.pathname}>
+    <HeaderStyle path={location.pathname} mode={mode}>
       {mode === 'light' ? (
         <Logo className="logo" alt="" />
       ) : (
