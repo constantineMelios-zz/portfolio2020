@@ -40,7 +40,7 @@ const HeaderStyle = styled.header`
     height: 70px;
     flex-wrap: no-wrap;
     border: none;
-    border-bottom: border-right: ${({ mode }) =>
+    border-bottom: ${({ mode }) =>
       mode === 'light' ? '1px solid var(--dark)' : '1px solid var(--light)'};
     padding: 0 1em;
   }

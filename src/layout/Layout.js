@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { useSelector } from 'react-redux';
-import { Footer, Header } from '../components';
+import { Footer, Header, ModeSelector } from '../components';
 import { LayoutStyle } from '../styles';
 
 export default function Layout({ children, location }) {
@@ -11,6 +11,7 @@ export default function Layout({ children, location }) {
     <>
       <Header location={location} mode={mode} />
       <LayoutStyle mode={mode}>{children}</LayoutStyle>
+      <ModeSelector />
       <Footer mode={mode} />
     </>
   );
