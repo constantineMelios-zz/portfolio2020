@@ -1,9 +1,9 @@
 import React from 'react';
 import { FooterStyle } from '../styles';
 
-export default function Footer() {
+export default function Footer({ mode }) {
   return (
-    <FooterStyle>
+    <FooterStyle mode={mode}>
       <small>
         Created by
         <a

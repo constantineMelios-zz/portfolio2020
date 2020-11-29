@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components';
+import { darkTheme, lightTheme } from './ThemesStyles';
 
 const entranceAnimation = keyframes`
   0% {transform: translateX(-100%);}
@@ -18,6 +19,7 @@ const hoverAnimation = keyframes`
 `;
 
 const HeaderStyle = styled.header`
+  ${({ mode }) => (mode === 'light' ? lightTheme : darkTheme)}
   width: 70px;
   height: 100vh;
   position: fixed;

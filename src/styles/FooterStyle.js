@@ -1,6 +1,8 @@
 import styled from 'styled-components';
+import { darkTheme, lightTheme } from './ThemesStyles';
 
 const FooterStyle = styled.footer`
+  ${({ mode }) => (mode === 'light' ? lightTheme : darkTheme)}
   margin: auto;
   padding: 1em;
   height: 40px;

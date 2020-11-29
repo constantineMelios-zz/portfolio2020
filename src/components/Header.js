@@ -1,15 +1,12 @@
 /* eslint-disable react/prop-types */
 import { Link } from 'gatsby';
 import React from 'react';
-import { useSelector } from 'react-redux';
 import { MdHome, MdPerson, MdViewModule, MdEmail } from 'react-icons/md';
 import { Logo, LogoDark } from '../assets';
 import { HeaderStyle } from '../styles';
 import { Social } from '.';
 
-export default function Header({ location }) {
-  const mode = useSelector((state) => state.mode);
-
+export default function Header({ location, mode }) {
   return (
     <HeaderStyle path={location.pathname} mode={mode}>
       {mode === 'light' ? (

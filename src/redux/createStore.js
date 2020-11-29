@@ -7,4 +7,6 @@ const reducer = combineReducers({
   language: languageReducer,
 });
 
-export default (preloadedState) => createStore(reducer, preloadedState);
+const store = (preloadedState) => createStore(reducer, preloadedState);
+
+export default store;
