@@ -8,7 +8,7 @@ const ModeSelectorStyle = styled.button`
     mode === 'light' ? 'var(--dark)' : 'var(--light)'};
   border: none;
   border-radius: 5rem;
-  padding: 0.5em 0.75em;
+  padding: 0.6em 0.75em;
   transition: background 0.15s ease;
   svg {
     width: 25px;
