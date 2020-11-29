@@ -20,7 +20,7 @@ const hoverAnimation = keyframes`
 const HeaderStyle = styled.header`
   width: 70px;
   height: 100vh;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   display: flex;
@@ -36,6 +36,7 @@ const HeaderStyle = styled.header`
     width: 100%;
     height: 70px;
     flex-wrap: no-wrap;
+    border: none;
     border-bottom: 1px solid var(--dark);
     padding: 0 1em;
   }
