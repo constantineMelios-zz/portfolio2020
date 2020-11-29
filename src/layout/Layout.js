@@ -1,6 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import { Header } from '../components';
+import { Footer, Header } from '../components';
 import { LayoutStyle } from '../styles';
 
 export default function Layout({ children, location }) {
@@ -8,6 +8,7 @@ export default function Layout({ children, location }) {
     <>
       <Header location={location} />
       <LayoutStyle>{children}</LayoutStyle>
+      <Footer />
     </>
   );
 }

@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import { MdHome, MdPerson, MdViewModule, MdEmail } from 'react-icons/md';
 import { Logo, LogoDark } from '../assets';
 import { HeaderStyle } from '../styles';
-import Social from './Social';
+import { Social } from '.';
 
 export default function Header({ location }) {
   const mode = useSelector((state) => state.mode);

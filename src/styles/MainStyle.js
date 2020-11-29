@@ -54,7 +54,6 @@ const redAnimation = keyframes`
 const MainStyle = styled.main`
   display: flex;
   flex-flow: row wrap;
-  min-height: 100vh;
   justify-content: center;
   align-items: center;
   padding: 2em;
