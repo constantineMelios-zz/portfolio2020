@@ -2,10 +2,10 @@
 import React from 'react';
 import { Header } from '../components';
 
-export default function Layout({ children }) {
+export default function Layout({ children, location }) {
   return (
     <>
-      <Header />
+      <Header location={location} />
       {children}
     </>
   );

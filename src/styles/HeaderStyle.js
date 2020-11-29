@@ -24,7 +24,7 @@ const HeaderStyle = styled.header`
   flex-flow: row wrap;
   border-right: 1px solid var(--dark);
   animation: ${entranceAnimation} 0.5s backwards;
-  animation-delay: 3s;
+  animation-delay: ${({ path }) => (path === '/' ? '3s' : '0s')};
   padding: 1em 0;
   transition: transform 0.25s ease;
   @media (max-width: 1250px) {
@@ -61,9 +61,16 @@ const HeaderStyle = styled.header`
       align-items: center;
       justify-content: center;
       padding: 1em;
+      transition: opacity 0.25s ease, text-decoration 0.25s ease;
       :hover,
       :active {
         animation: ${hoverAnimation} 1s 1;
+      }
+      &.disabled {
+        cursor: default;
+        animation: none;
+        opacity: 0.7;
+        text-decoration: underline;
       }
       svg {
         width: 35px;

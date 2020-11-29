@@ -5,6 +5,12 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    title: 'Constantine Melios',
+    description: 'Front-End Developer building cool stuff',
+    author: 'Constantine Melios',
+    siteURL: 'https://constantinemelios.com',
+  },
   plugins: [
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
@@ -22,7 +28,7 @@ module.exports = {
       resolve: `gatsby-plugin-react-redux`,
       options: {
         // [required] - path to your createStore module
-        pathToCreateStoreModule: './src/state/createStore',
+        pathToCreateStoreModule: './src/redux/createStore',
         // [optional] - options passed to `serialize-javascript`
         // info: https://github.com/yahoo/serialize-javascript#options
         // will be merged with these defaults:

@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import { Link } from 'gatsby';
 import React from 'react';
 import { useSelector } from 'react-redux';
@@ -6,26 +7,34 @@ import { Logo, LogoDark } from '../assets';
 import { HeaderStyle } from '../styles';
 import Social from './Social';
 
-export default function Header() {
+export default function Header({ location }) {
   const mode = useSelector((state) => state.mode);
-
   return (
-    <HeaderStyle>
+    <HeaderStyle path={location.pathname}>
       {mode === 'light' ? <Logo alt="" /> : <LogoDark alt="" />}
       <nav>
-        <Link exact to="/">
+        <Link to="/" className={location.pathname === '/' ? 'disabled' : ''}>
           <MdHome />
           Home
         </Link>
-        <Link exact to="/About">
+        <Link
+          to="/About"
+          className={location.pathname === '/About' ? 'disabled' : ''}
+        >
           <MdPerson />
           About
         </Link>
-        <Link exact to="/Projects">
+        <Link
+          to="/Projects"
+          className={location.pathname === '/Projects' ? 'disabled' : ''}
+        >
           <MdViewModule />
           Projects
         </Link>
-        <Link exact to="/Contact">
+        <Link
+          to="/Contact"
+          className={location.pathname === '/Contact' ? 'disabled' : ''}
+        >
           <MdEmail />
           Contact
         </Link>
