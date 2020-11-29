@@ -11,7 +11,11 @@ export default function Header({ location }) {
   const mode = useSelector((state) => state.mode);
   return (
     <HeaderStyle path={location.pathname}>
-      {mode === 'light' ? <Logo alt="" /> : <LogoDark alt="" />}
+      {mode === 'light' ? (
+        <Logo className="logo" alt="" />
+      ) : (
+        <LogoDark className="logo" alt="" />
+      )}
       <nav>
         <Link to="/" className={location.pathname === '/' ? 'disabled' : ''}>
           <MdHome />

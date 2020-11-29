@@ -5,9 +5,14 @@ const entranceAnimation = keyframes`
   100% {transform: translateX(0);}
 `;
 
+const logoAnimation = keyframes`
+0% {filter: drop-shadow(-3px 0px 0px var(--blue)) drop-shadow(3px 0px 0px var(--red));}
+100% {filter: drop-shadow(-1px 0px 0px var(--blue)) drop-shadow(1px 0px 0px var(--red));}
+`;
+
 const hoverAnimation = keyframes`
   25% {filter: drop-shadow(-3px 0px 0px var(--blue)) drop-shadow(3px 0px 0px var(--red));}
-  50% {filter: drop-shadow(-1px 0px 0px var(--blue)) drop-shadow(1px 0px 0px var(--red));}
+  50% {filter: drop-shadow(-2px 0px 0px var(--blue)) drop-shadow(2px 0px 0px var(--red));}
   75% {filter: drop-shadow(-3px 0px 0px var(--blue)) drop-shadow(3px 0px 0px var(--red));}
   100% {filter: none;}
 `;
@@ -24,7 +29,7 @@ const HeaderStyle = styled.header`
   flex-flow: row wrap;
   border-right: 1px solid var(--dark);
   animation: ${entranceAnimation} 0.5s backwards;
-  animation-delay: ${({ path }) => (path === '/' ? '3s' : '0s')};
+  animation-delay: ${({ path }) => (path === '/' ? '1.5s' : '0s')};
   padding: 1em 0;
   transition: transform 0.25s ease;
   @media (max-width: 1250px) {
@@ -37,11 +42,12 @@ const HeaderStyle = styled.header`
   @media (max-width: 880px) {
     transform: translateX(-100%);
   }
-  svg {
+  .logo {
     margin: 0 auto;
     width: 50px;
     height: 50px;
     align-self: flex-start;
+    animation: ${logoAnimation} 0.25s infinite;
     @media (max-width: 1250px) {
       align-self: center;
     }
