@@ -10,7 +10,7 @@ export function dark() {
   };
 }
 
-function modeReducer(mode = 'light', action) {
+function modeReducer(mode = 'dark', action) {
   switch (action.type) {
     case 'LIGHT_MODE':
       return 'light';

@@ -27,7 +27,8 @@ const HeaderStyle = styled.header`
   align-items: center;
   justify-content: center;
   flex-flow: row wrap;
-  border-right: 1px solid var(--dark);
+  border-right: ${({ mode }) =>
+    mode === 'light' ? '1px solid var(--dark)' : '1px solid var(--light)'};
   animation: ${entranceAnimation} 0.5s backwards;
   animation-delay: ${({ path }) => (path === '/' ? '1.5s' : '0s')};
   padding: 1em 0;
@@ -37,7 +38,8 @@ const HeaderStyle = styled.header`
     height: 70px;
     flex-wrap: no-wrap;
     border: none;
-    border-bottom: 1px solid var(--dark);
+    border-bottom: border-right: ${({ mode }) =>
+      mode === 'light' ? '1px solid var(--dark)' : '1px solid var(--light)'};
     padding: 0 1em;
   }
   @media (max-width: 880px) {
