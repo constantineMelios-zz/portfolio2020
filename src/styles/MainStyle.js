@@ -117,7 +117,8 @@ const MainStyle = styled.main`
       position: absolute;
       left: 0;
       bottom: 0;
-      background: var(--dark);
+      background: ${({ mode }) =>
+        mode === 'light' ? 'var(--dark)' : 'var(--light)'};
     }
   }
   .main__content {

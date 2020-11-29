@@ -1,5 +1,6 @@
 import { Link } from 'gatsby';
 import React from 'react';
+import { useSelector } from 'react-redux';
 import {
   CSS,
   Gatsby,
@@ -14,8 +15,10 @@ import {
 import { MainStyle } from '../styles';
 
 export default function Home() {
+  const mode = useSelector((state) => state.mode);
+
   return (
-    <MainStyle>
+    <MainStyle mode={mode}>
       <div className="main__side">
         <h1 className="main__title">
           <span id="first">Hello, I am</span>
