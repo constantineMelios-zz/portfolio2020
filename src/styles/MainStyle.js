@@ -1,5 +1,4 @@
 import styled, { keyframes } from 'styled-components';
-import { darkTheme, lightTheme } from './ThemesStyles';
 
 const titleFirstAnimation = keyframes`
   0% { transform: translate3d(0, 200%, 0); opacity: 0;}
