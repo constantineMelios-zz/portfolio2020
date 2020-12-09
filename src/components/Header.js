@@ -1,10 +1,8 @@
 /* eslint-disable react/prop-types */
-import { Link } from 'gatsby';
 import React from 'react';
-import { MdHome, MdPerson, MdViewModule, MdEmail } from 'react-icons/md';
 import { Logo, LogoDark } from '../assets';
 import { HeaderStyle } from '../styles';
-import { Social } from '.';
+import { Social, Navigation } from '.';
 
 export default function Header({ location, mode }) {
   return (
@@ -14,33 +12,7 @@ export default function Header({ location, mode }) {
       ) : (
         <LogoDark className="logo" alt="" />
       )}
-      <nav>
-        <Link to="/" className={location.pathname === '/' ? 'disabled' : ''}>
-          <MdHome />
-          Home
-        </Link>
-        <Link
-          to="/About"
-          className={location.pathname === '/About' ? 'disabled' : ''}
-        >
-          <MdPerson />
-          About
-        </Link>
-        <Link
-          to="/Projects"
-          className={location.pathname === '/Projects' ? 'disabled' : ''}
-        >
-          <MdViewModule />
-          Projects
-        </Link>
-        <Link
-          to="/Contact"
-          className={location.pathname === '/Contact' ? 'disabled' : ''}
-        >
-          <MdEmail />
-          Contact
-        </Link>
-      </nav>
+      <Navigation location={location} />
       <Social />
     </HeaderStyle>
   );

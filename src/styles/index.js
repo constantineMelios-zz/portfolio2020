@@ -5,3 +5,4 @@ export { default as SocialStyle } from './SocialStyle';
 export { default as LayoutStyle } from './LayoutStyle';
 export { default as FooterStyle } from './FooterStyle';
 export { default as ModeSelectorStyle } from './ModeSelectorStyle';
+export { default as NavigationStyle } from './NavigationStyle';
