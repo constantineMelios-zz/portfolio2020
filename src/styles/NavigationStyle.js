@@ -8,7 +8,7 @@ const hoverAnimation = keyframes`
 `;
 
 const NavigationStyle = styled.nav`
-  flex: 1 1 50%;
+  width: max-content;
   display: flex;
   flex-flow: row wrap;
   align-items: center;

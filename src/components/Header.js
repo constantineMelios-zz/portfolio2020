@@ -13,7 +13,7 @@ export default function Header({ location, mode }) {
         <LogoDark className="logo" alt="" />
       )}
       <Navigation location={location} />
-      <Social />
+      <Social className="social" />
     </HeaderStyle>
   );
 }

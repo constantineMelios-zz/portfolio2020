@@ -28,19 +28,23 @@ const HeaderStyle = styled.header`
   animation-delay: ${({ path }) => (path === '/' ? '1.5s' : '0s')};
   padding: 1em 0;
   transition: transform 0.25s ease;
+  z-index: 1000;
   @media (max-width: 1250px) {
     width: 100%;
     height: 70px;
     flex-wrap: no-wrap;
+    align-items: center;
+    justify-content: space-between;
     border: none;
     border-bottom: ${({ mode }) =>
       mode === 'light' ? '1px solid var(--dark)' : '1px solid var(--light)'};
     padding: 0 1em;
   }
-  @media (max-width: 880px) {
-    transform: translateX(-100%);
+  @media (max-width: 600px) {
+    justify-content: space-between;
   }
   .logo {
+    flex: 0 0 fit-content;
     margin: 0 auto;
     width: 50px;
     height: 50px;
@@ -48,12 +52,16 @@ const HeaderStyle = styled.header`
     animation: ${logoAnimation} 0.25s infinite;
     @media (max-width: 1250px) {
       align-self: center;
+      margin: 0;
     }
   }
-  div {
+  .social {
     align-self: flex-end;
     @media (max-width: 1250px) {
       align-self: center;
+    }
+    @media (max-width: 600px) {
+      display: none;
     }
   }
 `;

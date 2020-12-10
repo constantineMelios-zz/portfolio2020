@@ -21,8 +21,8 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
   body {
-    background: var(--light);
-    color: var(--dark);
+    background: var(--dark);
+    color: var(--light);
     font-family: 'Rubik', sans-serif;
     overflow-x: hidden;
   }

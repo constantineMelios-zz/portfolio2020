@@ -2,9 +2,9 @@ import React from 'react';
 import { ImGithub, ImLinkedin, ImCodepen, ImTwitter } from 'react-icons/im';
 import { SocialStyle } from '../styles';
 
-export default function Social() {
+export default function Social({ className }) {
   return (
-    <SocialStyle>
+    <SocialStyle className={className}>
       <a
         href="https://www.linkedin.com/in/cmelios/"
         target="_blank"

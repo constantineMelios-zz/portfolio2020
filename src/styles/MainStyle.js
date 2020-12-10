@@ -57,6 +57,7 @@ const MainStyle = styled.main`
   justify-content: center;
   align-items: center;
   padding: 2em;
+  padding-bottom: 0;
   .main__side {
     flex: 0 1 max-content;
   }
@@ -65,6 +66,9 @@ const MainStyle = styled.main`
     line-height: 1.09em;
     font-weight: var(--bold);
     position: relative;
+    @media (max-width: 880px) {
+      text-align: center;
+    }
     span {
       display: block;
       height: 50%;
@@ -135,6 +139,9 @@ const MainStyle = styled.main`
     @media (min-width: 1100px) {
       font-size: 1.25rem;
     }
+    @media (max-width: 880px) {
+      margin: auto;
+    }
   }
   a {
     font-size: 1rem;
@@ -147,6 +154,10 @@ const MainStyle = styled.main`
     animation: ${buttonAnimation} 2.5s backwards;
     @media (min-width: 1100px) {
       font-size: 1.25rem;
+    }
+    @media (max-width: 880px) {
+      margin: 0.75em;
+      margin-left: 1.25em;
     }
     &.main__primary-button {
       color: var(--light);
@@ -189,42 +200,65 @@ const MainStyle = styled.main`
     .react {
       width: 125px;
       transform: translateX(70%) translateY(60%) rotate(-15deg);
+      @media (max-width: 880px) {
+        width: 100px;
+      }
     }
     .redux {
       width: 75px;
       transform: translateX(100%) translateY(60%) rotate(15deg);
+      @media (max-width: 880px) {
+        width: 50px;
+      }
     }
     .html {
       width: 70px;
       transform: translateX(-110%) translateY(115%) rotate(5deg);
+      @media (max-width: 880px) {
+        width: 45px;
+      }
     }
     .gatsby {
       width: 90px;
       transform: translateX(100%) translateY(80%) rotate(-8deg);
+      @media (max-width: 880px) {
+        width: 65px;
+      }
     }
     .javascript {
       z-index: 0;
       width: 250px;
+      @media (max-width: 880px) {
+        width: 200px;
+      }
     }
     .git {
       width: 125px;
       transform: translateX(-50%) translateY(15%) rotate(-8deg);
+      @media (max-width: 880px) {
+        width: 100px;
+      }
     }
     .styled-components {
       width: 70px;
       transform: translateX(125%) translateY(-120%) rotate(-8deg);
+      @media (max-width: 880px) {
+        width: 45px;
+      }
     }
     .css {
       width: 125px;
       transform: translateX(30%) translateY(-30%) rotate(8deg);
+      @media (max-width: 880px) {
+        width: 100px;
+      }
     }
     .sass {
       width: 80px;
       transform: translateX(-110%) translateY(-20%) rotate(-12deg);
-    }
-    .tailwind {
-      width: 40px;
-      transform: translateX(320%) translateY(-325%) rotate(-12deg);
+      @media (max-width: 880px) {
+        width: 55px;
+      }
     }
   }
 `;
