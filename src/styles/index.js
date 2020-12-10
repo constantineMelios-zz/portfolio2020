@@ -6,3 +6,4 @@ export { default as LayoutStyle } from './LayoutStyle';
 export { default as FooterStyle } from './FooterStyle';
 export { default as ModeSelectorStyle } from './ModeSelectorStyle';
 export { default as NavigationStyle } from './NavigationStyle';
+export { default as ContactStyle } from './ContactStyle';

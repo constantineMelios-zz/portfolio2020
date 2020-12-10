@@ -10,6 +10,7 @@ const ModeSelectorStyle = styled.button`
   border-radius: 5rem;
   padding: 0.6em 0.75em;
   transition: background 0.15s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   svg {
     width: 25px;
     height: 25px;
