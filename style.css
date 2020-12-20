@@ -50,7 +50,7 @@
 
 body {
   margin: 0;
-  width: 100vw;
+  width: 100%;
   background-color: var(--dark-color);
   background-image: -webkit-gradient(linear, left top, right top, from(var(--dark-color)), to(#292929));
   background-image: linear-gradient(to right, var(--dark-color) 0%, #292929 100%);
@@ -72,6 +72,21 @@ a:focus {
 a:hover, a:focus, a:active {
   -webkit-animation: hover 0.5s 1;
           animation: hover 0.5s 1;
+}
+
+a.text:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 0%;
+  background-color: var(--light-color);
+  -webkit-transition: width 0.5s ease;
+  transition: width 0.5s ease;
+}
+a.text:focus:after, a.text:hover:after {
+  width: 100%;
 }
 
 .section {
@@ -159,17 +174,6 @@ h2.title {
   position: relative;
   letter-spacing: 0.1em;
 }
-.header .nav__item a:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 1px;
-  width: 0%;
-  background-color: var(--light-color);
-  -webkit-transition: width 0.5s ease;
-  transition: width 0.5s ease;
-}
 
 .intro {
   min-height: 100vh;
@@ -181,6 +185,21 @@ h2.title {
 .intro .intro__content {
   font-size: 1.25rem;
   max-width: 600px;
+}
+.intro .buttons {
+  margin-top: 1em;
+}
+.intro .buttons .button {
+  background-color: transparent;
+  border: 1px solid var(--light-color);
+  font-family: inherit;
+  color: inherit;
+  font-size: 1rem;
+  padding: 0.5em 0.8em;
+  margin-right: 1em;
+}
+.intro .buttons .button:last-child {
+  margin-right: 0;
 }
 
 .project {
@@ -224,6 +243,7 @@ h2.title {
 }
 .project .project__content a {
   margin-right: 1em;
+  position: relative;
 }
 .project .project__content a:last-child {
   margin-right: 0;
