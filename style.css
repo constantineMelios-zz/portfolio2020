@@ -2,8 +2,47 @@
 :root {
   --light-color: #ddd1c3;
   --dark-color: #080808;
+  --red-color: #f41101;
+  --blue-color: #3e78b2;
 }
 
+@-webkit-keyframes hover {
+  25% {
+    -webkit-filter: drop-shadow(-3px 0px 0px var(--blue-color)) drop-shadow(3px 0px 0px var(--red-color));
+            filter: drop-shadow(-3px 0px 0px var(--blue-color)) drop-shadow(3px 0px 0px var(--red-color));
+  }
+  50% {
+    -webkit-filter: drop-shadow(-1px 0px 0px var(--blue-color)) drop-shadow(1px 0px 0px var(--red-color));
+            filter: drop-shadow(-1px 0px 0px var(--blue-color)) drop-shadow(1px 0px 0px var(--red-color));
+  }
+  75% {
+    -webkit-filter: drop-shadow(-3px 0px 0px var(--blue-color)) drop-shadow(3px 0px 0px var(--red-color));
+            filter: drop-shadow(-3px 0px 0px var(--blue-color)) drop-shadow(3px 0px 0px var(--red-color));
+  }
+  100% {
+    -webkit-filter: none;
+            filter: none;
+  }
+}
+
+@keyframes hover {
+  25% {
+    -webkit-filter: drop-shadow(-3px 0px 0px var(--blue-color)) drop-shadow(3px 0px 0px var(--red-color));
+            filter: drop-shadow(-3px 0px 0px var(--blue-color)) drop-shadow(3px 0px 0px var(--red-color));
+  }
+  50% {
+    -webkit-filter: drop-shadow(-1px 0px 0px var(--blue-color)) drop-shadow(1px 0px 0px var(--red-color));
+            filter: drop-shadow(-1px 0px 0px var(--blue-color)) drop-shadow(1px 0px 0px var(--red-color));
+  }
+  75% {
+    -webkit-filter: drop-shadow(-3px 0px 0px var(--blue-color)) drop-shadow(3px 0px 0px var(--red-color));
+            filter: drop-shadow(-3px 0px 0px var(--blue-color)) drop-shadow(3px 0px 0px var(--red-color));
+  }
+  100% {
+    -webkit-filter: none;
+            filter: none;
+  }
+}
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -29,6 +68,10 @@ a {
 a:focus {
   outline: none;
 }
+a:hover, a:focus, a:active {
+  -webkit-animation: hover 0.5s 1;
+          animation: hover 0.5s 1;
+}
 
 .section {
   display: -webkit-box;
@@ -41,7 +84,12 @@ a:focus {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 8em 4em;
+  padding: 8em;
+}
+@media (max-width: 600px) {
+  .section {
+    padding: 4em 0;
+  }
 }
 
 .title {
@@ -93,6 +141,7 @@ h2.title {
   background-color: var(--dark-color);
   background-image: -webkit-gradient(linear, left top, right top, from(var(--dark-color)), to(#292929));
   background-image: linear-gradient(to right, var(--dark-color) 0%, #292929 100%);
+  z-index: 1;
 }
 .header .logo {
   height: 3em;
@@ -118,9 +167,6 @@ h2.title {
   -webkit-transition: width 0.5s ease;
   transition: width 0.5s ease;
 }
-.header .nav__item a:focus:after, .header .nav__item a:active:after, .header .nav__item a:hover:after {
-  width: 100%;
-}
 
 .intro {
   min-height: 100vh;
@@ -132,6 +178,62 @@ h2.title {
 .intro .intro__content {
   font-size: 1.25rem;
   max-width: 600px;
+}
+
+.project {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 4em;
+  max-width: 1500px;
+  margin: 2em auto;
+  position: relative;
+}
+.project .project__content {
+  padding: 2em;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  max-width: 800px;
+  text-align: center;
+}
+.project .project__content .project__title {
+  font-size: 1.75rem;
+}
+.project .project__content a {
+  margin-right: 1em;
+}
+.project .project__content a:last-child {
+  margin-right: 0;
+}
+.project .project__image {
+  display: block;
+  width: 300px;
+  height: 300px;
+  border-radius: 10px;
+  margin: 0 2em;
+}
+.project::after {
+  content: "";
+  width: 70%;
+  height: 1px;
+  background-color: var(--light-color);
+  position: absolute;
+  bottom: -4em;
+  left: 15%;
+}
+.project:last-child::after {
+  width: 0;
 }
 
 .techs__content {
