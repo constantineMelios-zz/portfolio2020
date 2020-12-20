@@ -50,6 +50,7 @@
 
 body {
   margin: 0;
+  width: 100vw;
   background-color: var(--dark-color);
   background-image: -webkit-gradient(linear, left top, right top, from(var(--dark-color)), to(#292929));
   background-image: linear-gradient(to right, var(--dark-color) 0%, #292929 100%);
@@ -125,9 +126,11 @@ h2.title {
 
 .header {
   position: fixed;
+  min-width: calc(100vw - 1em);
+  margin-left: -2em;
   top: 0;
-  left: 2em;
-  padding-top: 1em;
+  padding: 1em;
+  padding-bottom: 0;
   width: calc(100% - 4em);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -199,6 +202,14 @@ h2.title {
   margin: 2em auto;
   position: relative;
 }
+@media (max-width: 920px) {
+  .project:nth-child(2n) {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap-reverse;
+            flex-flow: row wrap-reverse;
+  }
+}
 .project .project__content {
   padding: 2em;
   -webkit-box-flex: 1;
@@ -209,6 +220,7 @@ h2.title {
 }
 .project .project__content .project__title {
   font-size: 1.75rem;
+  line-height: 1.5em;
 }
 .project .project__content a {
   margin-right: 1em;
@@ -221,7 +233,6 @@ h2.title {
   width: 300px;
   height: 300px;
   border-radius: 10px;
-  margin: 0 2em;
 }
 .project::after {
   content: "";
